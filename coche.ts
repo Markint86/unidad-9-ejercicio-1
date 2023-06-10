@@ -12,4 +12,18 @@ class Coche extends Vehiculo {
 
     }
 
+import { Autonomo } from './autonomo/autonomo';
+class CocheAutonomo extends Coche implements Autonomo {
+    constructor(
+        plazas: number,
+        public nivelAutomatizacion: number,
+        public precisionGPS: number,
+        public camaras: number,
+        public machineLearning: boolean,
+        public navegacionInercial: boolean
+    ) {
+            super(plazas);
+    }
+    }	
+
 }
